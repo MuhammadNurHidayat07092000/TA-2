@@ -37,7 +37,7 @@
                         <a href={{ url('home') }}> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
                     <li>
-                        <a href={{ url('jenisnarkoba') }}> <i class="menu-icon fa fa-tag"></i>Jenis Narkoba</a>
+                        <a href={{ url('types') }}> <i class="menu-icon fa fa-tag"></i>Jenis Narkoba</a>
                     </li>
                     <li>
                         <a href={{ url('categories') }}> <i class="menu-icon fa fa-tags"></i>Kategori Narkoba</a>

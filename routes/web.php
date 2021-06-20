@@ -31,3 +31,5 @@ Route::get('categories/delete/{id?}', 'CategoryController@delete');
 Route::resource('categories', 'CategoryController');
 
 Route::resource('articles', 'ArticleController');
+
+Route::resource('types', 'TypeController');
