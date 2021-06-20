@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Type;
 use Illuminate\Http\Request;
+
+use function PHPSTORM_META\type;
 
 class TypeController extends Controller
 {
@@ -26,7 +29,9 @@ class TypeController extends Controller
      */
     public function create()
     {
-        //
+        $category = Category::all();
+
+        return view('type.create', compact('category'));
     }
 
     /**
@@ -37,7 +42,9 @@ class TypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Type::create($request->all());
+
+        return redirect('types')->with('status', 'Jenis Narkoba berhasil ditambahkan!');
     }
 
     /**
@@ -48,7 +55,6 @@ class TypeController extends Controller
      */
     public function show(Type $type)
     {
-        //
     }
 
     /**

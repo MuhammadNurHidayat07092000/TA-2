@@ -31,7 +31,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="pull-left">
-                        Tambah Artikel
+                        <strong>Tambah Artikel</strong>
                     </div>
                     <div class="pull-right">
                         <a href="{{ url('articles') }}" class="btn btn-secondary btn-sm">

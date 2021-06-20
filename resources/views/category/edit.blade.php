@@ -31,7 +31,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="pull-left">
-                        Ubah Kategori Narkoba
+                        <strong>Ubah Kategori Narkoba</strong>
                     </div>
                     <div class="pull-right">
                         <a href="{{ url('categories') }}" class="btn btn-secondary btn-sm">

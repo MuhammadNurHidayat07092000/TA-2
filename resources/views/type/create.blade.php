@@ -31,28 +31,28 @@
             <div class="card">
                 <div class="card-header">
                     <div class="pull-left">
-                        Tambah Jenis Narkoba
+                        <strong>Tambah Jenis Narkoba</strong>
                     </div>
                     <div class="pull-right">
-                        <a href="{{ url('jenisnarkoba') }}" class="btn btn-secondary btn-sm">
+                        <a href="{{ url('types') }}" class="btn btn-secondary btn-sm">
                             <i class="fa fa-undo"></i>Back
                         </a>
                     </div>
                 </div>       
                 <div class="card-body">
                     <div class="col-md-4 offset-md-4">
-                        <form action="{{ url('jenisnarkoba') }}" method="post">
+                        <form action="{{ url('types') }}" method="post">
                             @csrf
                             <div class="form-group">
                                 <label for="nama_narkoba">Nama Narkoba</label>
                                 <input type="text" name="nama_narkoba" class="form-control" autofocus required>
                             </div>
                             <div class="form-group">
-                                <label for="kategori">Kategori</label>
-                                <select name="kategori" id="kategori" class="form-control">
+                                <label for="id_kategori">Kategori</label>
+                                <select name="id_kategori" id="id_kategori" class="form-control">
                                     <option value="">-- Pilih --</option>
-                                    @foreach ($jenisnarkoba as $key => $item)
-                                      <option value="{{ $item->kategorinarkoba->id }}">{{ $item->kategorinarkoba->jenis_kategori }} . {{ $item->kategorinarkoba->golongan }}</option>      
+                                    @foreach ($category as $item)
+                                      <option value="{{ $item->id }}">{{ $item->jenis_kategori }} golongan {{ $item->golongan }}</option>      
                                     @endforeach
                                 </select>
                             </div>
