@@ -6,9 +6,8 @@ use App\Category;
 use Illuminate\Http\Request;
 use Prophecy\Call\Call;
 
-// use Illuminate\Database\Eloquent\Collection;
 // use Illuminate\Support\Facades\DB;
-// use App\Http\Controllers\Controller;
+// use Illuminate\Database\Eloquent\Collection;
 
 class CategoryController extends Controller
 {
@@ -19,7 +18,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        $categories = Category::paginate(10);
 
         return view('category.index', compact('categories'));
     }

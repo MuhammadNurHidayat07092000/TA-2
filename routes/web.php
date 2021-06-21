@@ -25,11 +25,17 @@ Route::get('home2', function () {
     return view('home2');
 });
 
+//Kategori
 Route::get('categories/trash', 'CategoryController@trash');
 Route::get('categories/restore/{id?}', 'CategoryController@restore');
 Route::get('categories/delete/{id?}', 'CategoryController@delete');
 Route::resource('categories', 'CategoryController');
 
+//Artikel
 Route::resource('articles', 'ArticleController');
 
+//Jenis
+Route::get('types/trash', 'TypeController@trash');
+Route::get('types/restore/{id?}', 'TypeController@restore');
+Route::get('types/delete/{id?}', 'TypeController@delete');
 Route::resource('types', 'TypeController');

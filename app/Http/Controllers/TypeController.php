@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Type;
 use Illuminate\Http\Request;
+use Prophecy\Call\Call;
 
 use function PHPSTORM_META\type;
 
@@ -17,7 +18,7 @@ class TypeController extends Controller
      */
     public function index()
     {
-        $types = Type::all();
+        $types = Type::paginate(10);
         // dd($types);
         return view('type/index', compact('types'));
     }
@@ -29,9 +30,8 @@ class TypeController extends Controller
      */
     public function create()
     {
-        $category = Category::all();
-
-        return view('type.create', compact('category'));
+        $categories = Category::all();
+        return view('type.create', compact('categories'));
     }
 
     /**
@@ -43,7 +43,6 @@ class TypeController extends Controller
     public function store(Request $request)
     {
         Type::create($request->all());
-
         return redirect('types')->with('status', 'Jenis Narkoba berhasil ditambahkan!');
     }
 
@@ -65,7 +64,8 @@ class TypeController extends Controller
      */
     public function edit(Type $type)
     {
-        //
+        $categories = Category::all();
+        return view('type.edit', compact('type', 'categories'));
     }
 
     /**
@@ -77,7 +77,14 @@ class TypeController extends Controller
      */
     public function update(Request $request, Type $type)
     {
-        //
+        $type->nama_narkoba = $request->nama_narkoba;
+        $type->id_kategori = $request->id_kategori;
+        $type->gambar = $request->gambar;
+        $type->deskripsi = $request->deskripsi;
+        $type->epek_gejala = $request->epek_gejala;
+        $type->save();
+
+        return redirect('types')->with('status', 'Jenis Narkoba berhasil diubah!');
     }
 
     /**
@@ -88,6 +95,37 @@ class TypeController extends Controller
      */
     public function destroy(Type $type)
     {
-        //
+        $type->delete();
+        return redirect('types')->with('status', 'Jenis narkoba berhasil terhapus sementara!');
+    }
+
+    public function trash()
+    {
+        $types = Type::onlyTrashed()->get();
+        return view('type.trash', compact('types'));
+    }
+
+    public function restore($id = null)
+    {
+        if ($id != null) {
+            $types = Type::onlyTrashed()
+                ->where('id', $id)
+                ->restore();
+        } else {
+            $types = Type::onlyTrashed()->restore();
+        }
+    }
+
+    public function delete($id = null)
+    {
+        if ($id != null) {
+            $types = Type::onlyTrashed()
+                ->where('id', $id)
+                ->forceDelete();
+        } else {
+            $types = Type::onlyTrashed()->forceDelete();
+        }
+
+        return redirect('types/trash')->with('status', 'Jenis narkoba berhasil dihapus permanen!');
     }
 }

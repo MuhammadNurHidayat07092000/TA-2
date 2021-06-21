@@ -65,9 +65,9 @@
                             </tr>  
                         </thead>
                         <tbody>
-                            @foreach ($categories as $item)
+                            @foreach ($categories as $key => $item)
                                 <tr>
-                                    <td>{{ $loop->iteration }}</td>     
+                                    <td>{{ $categories->firstItem() + $key }}</td>     
                                     <td>{{ $item->jenis_kategori }}</td>
                                     <td>{{ $item->golongan }}</td>
                                     <td class="text-center">
@@ -86,7 +86,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {{-- <div class="pull-left">
+                    <div class="pull-left">
                         Showing
                         {{ $categories->firstItem() }}
                         to
@@ -96,7 +96,7 @@
                     </div>
                     <div class="pull-right">
                         {{ $categories->links() }}
-                    </div> --}}
+                    </div>
                 </div>
             </div>     
         </div>

@@ -31,7 +31,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="pull-left">
-                        <strong>Tambah Jenis Narkoba</strong>
+                        <strong>Ubah Jenis Narkoba</strong>
                     </div>
                     <div class="pull-right">
                         <a href="{{ url('types') }}" class="btn btn-secondary btn-sm">
@@ -41,32 +41,34 @@
                 </div>       
                 <div class="card-body">
                     <div class="col-md-4 offset-md-4">
-                        <form action="{{ url('types') }}" method="post">
+                        <form action="{{ url('types/' . $type->id) }}" method="post">
+                            @method('PUT')
                             @csrf
                             <div class="form-group">
                                 <label for="nama_narkoba">Nama Narkoba</label>
-                                <input type="text" name="nama_narkoba" class="form-control" autofocus required>
+                                <input type="text" name="nama_narkoba" class="form-control" value="{{ $type->nama_narkoba }}" autofocus required>
                             </div>
                             <div class="form-group">
                                 <label for="id_kategori">Kategori</label>
                                 <select name="id_kategori" id="id_kategori" class="form-control">
                                     <option value="">-- Pilih --</option>
                                     @foreach ($categories as $item)
-                                      <option value="{{ $item->id }}">{{ $item->jenis_kategori }} golongan {{ $item->golongan }}</option>      
+                                      <option value="{{ $item->id }}" {{ $type->id_kategori == $item->id ? 'selected' : null }} >{{ $item->jenis_kategori }} golongan {{ $item->golongan }}</option>      
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="gambar">Gambar</label>
-                                <input type="file" alt="submit" width="" height="" required>
+                                <label for="gambar">Gambar</label><br>
+                                <img src="{{ $type->gambar }}" class="w-100">
+                                <input type="file" alt="submit" width="" height="" value="true" required>
                             </div>
                             <div class="form-group">
                                 <label for="deskripsi">Deskripsi</label>
-                                <textarea name="deskripsi" id="deskripsi" cols="50" rows="10"></textarea>
+                                <textarea name="deskripsi" id="deskripsi" cols="50" rows="10">{{ $type->deskripsi }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="epek_gejala">Efek dan Gejala</label>
-                                <textarea name="epek_gejala" id="epek_gejala" cols="50" rows="10"></textarea>
+                                <textarea name="epek_gejala" id="epek_gejala" cols="50" rows="10">{{ $type->epek_gejala }}</textarea>
                             </div>
                             <button type="submit" class="btn btn-success">Save</button>
                         </form>

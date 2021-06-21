@@ -37,6 +37,9 @@
                         <strong>Data Jenis Narkoba</strong>
                     </div>
                     <div class="pull-right">
+                        <a href="{{ url('types/trash') }}" class="btn btn-danger btn-sm">
+                            <i class="fa fa-trash"></i>Trash
+                        </a>
                         <a href="{{ url('types/create') }}" class="btn btn-success btn-sm">
                             <i class="fa fa-plus"></i>Add
                         </a>
@@ -53,17 +56,16 @@
                             </tr>  
                         </thead>
                         <tbody>
-                            @foreach ($types as $item)
+                            @foreach ($types as $key => $item)
                                 <tr>
-                                    {{-- <td class="text-center">{{ $loop->iteration }}</td>   --}}
-                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $types->firstItem() + $key}}</td>
                                     <td>{{ $item->nama_narkoba }}</td>
                                     <td>{{ $item->category->jenis_kategori }}</td>
                                     <td class="text-center">
-                                        <a href="{{ url('jeniskategori/edit/' .$item->id ) }}" class="btn btn-primary btn-sm mb-1">
+                                        <a href="{{ url('types/'.$item->id.'/edit' ) }}" class="btn btn-primary btn-sm mb-1">
                                             <i class="fa fa-pencil"></i>
                                         </a>
-                                        <form action="{{ url('jeniskategori/' .$item->id) }}" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
+                                        <form action="{{ url('types/' .$item->id) }}" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
                                             @method('delete')
                                             @csrf
                                             <button class="btn btn-sm btn-danger">
@@ -75,17 +77,17 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {{-- <div class="pull-left">
+                    <div class="pull-left">
                         Showing
-                        {{ $jenisnarkoba->firstItem() }}
+                        {{ $types->firstItem() }}
                         to
-                        {{ $jenisnarkoba->lastItem() }}
+                        {{ $types->lastItem() }}
                         of
-                        {{ $jenisnarkoba->total() }}
+                        {{ $types->total() }}
                     </div>
                     <div class="pull-right">
-                        {{ $jenisnarkoba->links() }}
-                    </div> --}}
+                        {{ $types->links() }}
+                    </div>
                 </div>
             </div>     
         </div>
