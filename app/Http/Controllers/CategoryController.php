@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Prophecy\Call\Call;
 
 // use Illuminate\Support\Facades\DB;
-// use Illuminate\Database\Eloquent\Collection;
 
 class CategoryController extends Controller
 {

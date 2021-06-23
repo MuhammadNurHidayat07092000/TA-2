@@ -25,6 +25,7 @@ Route::get('home2', function () {
     return view('home2');
 });
 
+//BACK-END
 //Kategori
 Route::get('categories/trash', 'CategoryController@trash');
 Route::get('categories/restore/{id?}', 'CategoryController@restore');
@@ -39,3 +40,14 @@ Route::get('types/trash', 'TypeController@trash');
 Route::get('types/restore/{id?}', 'TypeController@restore');
 Route::get('types/delete/{id?}', 'TypeController@delete');
 Route::resource('types', 'TypeController');
+
+//FRONT-END
+Route::get('frontends/artikel', 'FrontEndController@artikel');
+Route::get('frontends/dampak', 'FrontEndController@dampak');
+Route::get('frontends/penyebab', 'FrontEndController@penyebab');
+Route::get('frontends/sejarah', 'FrontEndController@sejarah');
+Route::get('frontends/struktur', 'FrontEndController@struktur');
+Route::get('frontends/uu', 'FrontEndController@uu');
+Route::get('frontends/visimisi', 'FrontEndController@visimisi');
+Route::get('frontends/jenisnark', 'FrontEndController@jenisnark');
+Route::get('frontends/pencarian', 'FrontEndController@pencarian');

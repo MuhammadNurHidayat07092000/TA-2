@@ -62,14 +62,14 @@
               <li><a href="{{ url('frontends/struktur') }}">Struktur Organisasi</a></li>
             </ul>
           </li>
-          <li class="active"><a href="{{ url('home2') }}">Beranda</a></li>
+          <li><a href="{{ url('home2') }}">Beranda</a></li>
           <li><a href="#artikel">Artikel</a></li>
           <li class="drop-down"><a href="">Narkotika</a>
             <ul>
               <li><a href="{{ url('frontends/penyebab') }}">Penyebab</a></li>
               <li><a href="{{ url('frontends/dampak') }}">Dampak</a></li>
               <li><a href="{{ url('frontends/uu') }}">Undang-Undang Narkotika</a></li>
-              <li><a href="{{ url('frontends/jenisnark') }}">Jenis-Jenis Narkotika</a></li>
+              <li class="active"><a href="{{ url('frontends/jenisnark') }}">Jenis-Jenis Narkotika</a></li>
               <li><a href="{{ url('frontends/pencarian') }}">Pencarian</a></li>
             </ul>
           </li>
@@ -77,59 +77,4 @@
       </nav>
     </div>
   </header>
-
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <h1>Selamat datang</h1>
-      <p>Bersama membangun Indonesia bebas dari <strong>Narkotika</strong></p>
-      <div class="d-flex">
-        {{-- <a href="#about" class="btn-get-started scrollto d-flex">Get Started</a> --}}
-        <button type="button" class="btn-get-started scrollto" data-toggle="modal" data-target="#scrollmodal">
-          Watch Video <i class="icofont-play-alt-2"></i>
-        </button>
-        
-        <div class="modal fade" id="scrollmodal" tabindex="-1" role="dialog" aria-labelledby="scrollmodalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="scrollmodalLabel">Daftar Video</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                    <a href="https://www.youtube.com/watch?v=WXn_-kpMA2M" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="false"> Video 1<i class="icofont-play-alt-2"></i></a><br>  
-                    <a href="https://www.youtube.com/watch?v=WXn_-kpMA2M" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="false"> Video 2<i class="icofont-play-alt-2"></i></a><br>  
-                    <a href="https://www.youtube.com/watch?v=WXn_-kpMA2M" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="false"> Video 3<i class="icofont-play-alt-2"></i></a>  
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                      <button type="button" class="btn btn-primary">Confirm</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-      </div>
-    </div>
-  </section>
-
-  @yield('about')
-  @yield('counts')
-  @yield('clients')
-  @yield('services')
-  @yield('contact')
-  @yield('footer')
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-23581568-13');
-</script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"65e0f372bacd0d40","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.5.2","si":10}'></script>
-
-
 </body>
-</html>
