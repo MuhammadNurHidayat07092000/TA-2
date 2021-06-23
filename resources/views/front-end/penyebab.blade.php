@@ -63,8 +63,8 @@
             </ul>
           </li>
           <li><a href="{{ url('home2') }}">Beranda</a></li>
-          <li><a href="#artikel">Artikel</a></li>
-          <li class="drop-down"><a href="">Narkotika</a>
+          {{-- <li><a href="#artikel">Artikel</a></li> --}}
+          <li class="drop-down active"><a href="">Narkotika</a>
             <ul>
               <li class="active"><a href="{{ url('frontends/penyebab') }}">Penyebab</a></li>
               <li><a href="{{ url('frontends/dampak') }}">Dampak</a></li>
@@ -77,4 +77,32 @@
       </nav>
     </div>
   </header>
+  <div class="container">
+      <div style="margin-top: 15%">
+          <h1 class="text-center mt-20">Penyebab</h1>
+            <hr>
+            <p><strong>Berikut adalah faktor-faktor penyebab seseorang menjadi penyalahguna narkoba:</strong> <br/>
+                <br/>1) Penyebab dari diri sendiri yaitu Ketidakmampuan menyesuaikan diri dengan lingkungan Kepribadian yang lemah Kurangnya percaya diri Tidak mampu mengendalikan diri Dorongan ingin tahu,ingin mencoba,ingin meniru Dorongan ingin berpetualang Mengalami tekanan jiwa Tidak memikirkan akibatnya dikemudian hari Ketidaktahuan akan bahaya narkoba.<br/> 
+                <br/>2) Penyebab yang bersumber dari keluarga(orang tua) Salah satu atau kedua orang tua adalah pengguna narkoba Tidak mendapatkan perhatian,dan kasih sayang dari orang tua Keluarga tidak harmonis(tidak ada komunikasi yang terbuka dalam keluarga) Orang tua tidak memberikan pengawasan kepada anaknya Orang tua terlalu memanjakan anaknya Orang tua sibuk mencari uang/mengejar karir sehingga perhatian kepada anaknya menjadi terabaikan.<br/>
+                <br/>3) Penyebab dari teman/kelompok sebaya Adanya satu atau beberapa teman kelompok yang menjadi pengguna narkoba Adanya anggota kelompok yang menjadi pengedar narkoba Adanya ajakan atau rayuan dari teman kelompok untuk menggunakan narkoba Paksaan dari teman kelompok agar menggunakan narkoba karena apabila tidak mau menggunakan akan dianggap tidak setia kawan Ingin menunjukan perhatian kepada teman.<br/> 
+                <br/>4.Penyebab yang bersumber dari lingkungan Masyarakat tidak acuh atau tidak peduli Longgarnya pengawasan sosial masyarakat Sulit mencari pekerjaan Penegakan hukum lemah Banyaknya pelanggaran hukum Kemiskinan dan pengangguran yang tinggi Menurunnya moralitas masyarakat Banyaknya pengedar narkoba yang mencari konsumen Banyaknya pengguna narkoba disekitar tempat tinggal.<br/>
+                
+                <br/><strong>Ada beberapa faktor yang menjadi penyebab penyalahgunaan narkotika pada seseorang. Berdasarkan kesehatan masyarakat, faktor-faktor penyebab timbulnya penyalahgunaan narkotika, terdiri dari:</strong> <br/> 
+                
+                <br/><strong> 1) Faktor Individu  Tiap individu memiliki perbedaan tingkat resiko untuk menyalahgunakan NAPZA</strong>. Faktor yang mempengruhi individu terdiri dari faktor kepribadian dan faktor konstitusi. Alasan-alasan yang biasanya berasal dari diri sendiri sebagai penyebab penyalahgunaan NAPZA antara lain: a. Keingintahuan yang besar untuk mencoba, tanpa sadar atau berpikir panjang mengenai akibatnya <br/> 
+                <br/>b. Keinginan untuk bersenang-senang<br/>
+                <br/>c. Keinginan untuk mengikuti trend atau gaya  <br/>
+                <br/>d. Keinginan untuk diterima oleh lingkungan atau kelompok  <br/>
+                <br/>e. Lari dari kebosanan, masalah atau kesusahan hidup  <br/>
+                <br/>f. Pengertian yang salah bahwa penggunaan sekali-sekali tidak menimbulkan ketagihan  <br/>
+                <br/>g. Tidak mampu atau tidak berani menghadapi tekanan dari lingkungan atau kelompok pergaulan untuk menggunakan NAPZA  <br/>
+                <br/>h. Tidak dapat berkata TIDAK terhadap NAPZA <br/>
+
+                <br/><strong>2) Faktor Lingkungan, meliputi:</strong> <br/>
+                <br/>a. Lingkungan Keluarga Hubungan ayah dan ibu yang retak, komunikasi yang kurang efektif antara orang tua dan anak, dan kurangnya rasa hormat antar anggota keluarga merupakan faktor yang ikut mendorong seseorang pada gangguan penggunaan zat.<br/>  
+                <br/>b. Lingkungan Sekolah Sekolah yang kurang disiplin, terletak dekat tempat hiburan, kurang memberi kesempatan pada siswa untuk mengembangkan diri secara kreatif dan positif, dan adanya murid pengguna NAPZA merupakan faktor kontributif terjadinya penyalahgunaan NAPZA.  <br/>
+                <br/>c. Lingkungan Teman Sebaya Adanya kebutuhan akan pergaulan teman sebaya mendorong remaja untuk dapat diterima sepenuhnya dalam kelompoknya. Ada kalanya menggunakan NAPZA merupakan suatu hal yng penting bagi remaja agar diterima dalam kelompok dan dianggap sebagai orang dewasa.
+            </p>
+      </div>
+  </div>
 </body>

@@ -63,7 +63,7 @@
             </ul>
           </li>
           <li class="active"><a href="{{ url('home2') }}">Beranda</a></li>
-          <li><a href="#artikel">Artikel</a></li>
+          {{-- <li><a href="#artikel">Artikel</a></li> --}}
           <li class="drop-down"><a href="">Narkotika</a>
             <ul>
               <li><a href="{{ url('frontends/penyebab') }}">Penyebab</a></li>
