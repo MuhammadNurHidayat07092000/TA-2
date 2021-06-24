@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
 {
-    public function artikel()
+    public function artikel($id)
     {
+        $articles = Article::where('id', $id)->get();
+        return view('front-end.artikel', compact('articles'));
     }
 
     public function dampak()

@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href={{ url('home') }}>Back End</a>
+                    <a href={{ url('auths') }}>Back End</a>
                     <a href={{ url('home2') }}>Front End</a>
                 </div>
             </div>

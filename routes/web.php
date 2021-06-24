@@ -22,9 +22,15 @@ Route::get('home', function () {
 });
 
 Route::get('home2', function () {
-    return view('home2');
+    // $articles = App\Article::take()->get();
+    $articles = App\Article::all();
+
+    return view('home2', [
+        'articles' => $articles
+    ]);
 });
 
+// Route::get('home2/artikel', 'FrontendController@artikel');
 //BACK-END
 //Kategori
 Route::get('categories/trash', 'CategoryController@trash');
@@ -41,8 +47,19 @@ Route::get('types/restore/{id?}', 'TypeController@restore');
 Route::get('types/delete/{id?}', 'TypeController@delete');
 Route::resource('types', 'TypeController');
 
+//Authentifikasi
+Route::get('auths', 'AuthController@formLogin')->name('login');
+Route::post('auths/proses', 'AuthController@login')->name('login');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('home', function () {
+        return view('home');
+    });
+});
+Route::get('auths/logout', 'AuthController@logout');
+
 //FRONT-END
-Route::get('frontends/artikel', 'FrontEndController@artikel');
+Route::get('frontends/artikel/{id}', 'FrontEndController@artikel');
 Route::get('frontends/dampak', 'FrontEndController@dampak');
 Route::get('frontends/penyebab', 'FrontEndController@penyebab');
 Route::get('frontends/sejarah', 'FrontEndController@sejarah');
