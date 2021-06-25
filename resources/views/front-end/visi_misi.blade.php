@@ -77,4 +77,23 @@
       </nav>
     </div>
   </header>
+  <div class="container">
+    <div class="row">
+      <div style="margin-top: 15%">
+        <h1 class="text-center">Visi<a href="#"><span> Misi</span></a></h1>
+        <hr>
+        <h3><strong><span>Visi</span></strong></h3>
+        <p><span>Menjadi Lembaga  Non Kementerian yang profesional dan mampu menggerakkan seluruh koponen masyarakat, bangsa dan negara Indonesia dalam melaksanakan Pencegahan dan Pemberantasan Penyalahgunaan dan Peredaran Gelap Narkotika, Psikotropika, Prekursor dan Bahan Adiktif Lainnya di Indonesia.</span></p>
+        
+        <h3><strong><span>Misi</span></strong></h3>
+        <ol type="1">
+          <li>Menyusun kebijakan nasional P4GN</li>
+          <li>Melaksanakan operasional P4GN sesuai bidang tugas   dan kewenangannya.</li>
+          <li>Mengkoordinasikan pencegahan dan pemberantasan penyalahgunaan dan peredaran gelap narkotika, psikotropika, prekursor dan bahan adiktif lainnya (narkoba)</li>
+          <li> Memonitor dan mengendalikan pelaksanaan kebijakan nasional P4GN.</li>
+          <li>Menyusun laporan pelaksanaan kebijakan nasional P4GN dan diserahkan kepada Presiden.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
 </body>
