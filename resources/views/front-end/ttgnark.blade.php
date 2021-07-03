@@ -77,4 +77,18 @@
       </nav>
     </div>
   </header>
+
+  <div class="container">
+    <div style="margin-top: 15%" id="search">
+      <form action="">
+        <a href="">
+          <img src="{{ asset('style2/assets/img/logo/bnnc.png') }}" width="30%" height="30%" style="border: 0px" class="mx-auto d-block" alt="">
+        </a>
+        <div class="d-flex justify-content-center mt-2 inline-block">
+          <input type="text" name="search" class="" placeholder="Narkotika...">
+          <input type="submit" name="submit" id="search" class="btn btn-success">
+        </div>
+        </form>
+    </div>
+  </div>
 </body>

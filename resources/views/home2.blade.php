@@ -94,9 +94,7 @@
   @section('clients')
       <section id="clients" class="clients section-bg">
         <div class="container" data-aos="zoom-in">
-
           <div class="row">
-
             <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
               <img src="{{ asset('style2/assets/img/clients/client-1.png') }}" class="img-fluid" alt="">
             </div>
