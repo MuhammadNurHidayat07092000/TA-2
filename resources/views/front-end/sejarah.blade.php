@@ -82,6 +82,8 @@
       <div class="col-lg-12">
         <h1 style="margin-top: 15%" class="text-center">Sejarah</h1>
         <hr>
+        <img src="{{ asset('style2/assets/img/front-e/bnn.png') }}" style="width: 50%" alt="image" class="mx-auto d-block">
+        {{-- <hr> --}}
         <strong>Perkembangan organisasi dan kelembagaan pemerintah yang diberikan kewenangan dalam penanganan narkotika</strong> sudah dimulai dari tahun 1971 dengan dikeluarkannya Instruksi
         Presiden Republik Indonesia (Inpres) Nomor 6 Tahun 1971 kepada Kepala Badan Koordinasi Intellijen Nasional (BAKIN) untuk menanggulangi 6 permasalahan nasional yang menonjol, yaitu pemberantasan uang palsu, penanggulangan penyalahgunaan narkoba, penanggulangan penyelundupan, penanggulangan kenakalan remaja, penanggulangan subversi, dan pengawasan orang asing.
         <br><br> 

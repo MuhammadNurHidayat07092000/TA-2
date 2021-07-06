@@ -62,7 +62,9 @@
                                     <div class="text-center">
                                         <td>{{ $item->isi }}</td>
                                     </div>
-                                    <td>{{ $item->gambar }}</td>
+                                    <td>
+                                        <img src="{{ asset('style2/assets/img/artikel/' . $item->gambar) }}" width="100px" alt="image">
+                                    </td>
                                     <td class="text-center">
                                         <a href="{{ url('articles/'.$item->id.'/edit'  ) }}" class="btn btn-primary btn-sm mb-1">
                                             <i class="fa fa-pencil"></i>

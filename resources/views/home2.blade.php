@@ -3,7 +3,7 @@
 @section('title','User Interface')
 
 <main id="main">
-  @section('about')
+  {{-- @section('about')
       <section id="about" class="about section-bg">
         <div class="container" data-aos="fade-up">
 
@@ -121,7 +121,7 @@
           </div>
         </div>
       </section>
-  @endsection
+  @endsection --}}
    
   @section('services')
       <section id="artikel" class="services">

@@ -81,6 +81,8 @@
       <div style="margin-top: 15%">
           <h1 class="text-center mt-20">Undang-undang <a href="#"><span>Narkotika</span></a></h1>
             <hr>
+            <img src="{{ asset('style2/assets/img/front-e/uud.jpg') }}" alt="image" class="mx-auto d-block">
+            <hr>
             <br/> Berdasarkan penelitian terbaru BNN jumlah penyalah guna 5,8 juta orang. Mereka dipasok oleh pengedar yang jumlahnya sebanding dengan jumlah penyalah guna. Karena itu, masyarakat harus dapat menghindar dan mengantisipasinya.  
             Dalam teori kesehatan penyalah guna itu orang sakit kecanduan narkotika. Pengedar itu orang yang menambah parah sakit kecanduannya.
             Menurut konvensi internasional (UU No 8 tahun 1976) penyalahgunaan narkotika itu dilarang diancam dengan hukuman penjara. Tetapi apabila telah dilakukan pelakunya yaitu penyalah guna diberikan alternatif penghukuman berupa rehabilitasi.

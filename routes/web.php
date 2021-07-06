@@ -48,15 +48,15 @@ Route::get('types/delete/{id?}', 'TypeController@delete');
 Route::resource('types', 'TypeController');
 
 //Authentifikasi
-Route::get('auths', 'AuthController@formLogin')->name('login');
-Route::post('auths/proses', 'AuthController@login')->name('login');
+// Route::get('auths', 'AuthController@formLogin')->name('login');
+// Route::post('auths/proses', 'AuthController@login')->name('login');
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('home', function () {
-        return view('home');
-    });
-});
-Route::get('auths/logout', 'AuthController@logout');
+// Route::group(['middleware' => 'auth'], function () {
+//     Route::get('home', function () {
+//         return view('home');
+//     });
+// });
+// Route::get('auths/logout', 'AuthController@logout');
 
 //FRONT-END
 Route::get('frontends/artikel/{id}', 'FrontEndController@artikel');

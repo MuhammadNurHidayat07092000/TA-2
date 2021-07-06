@@ -81,6 +81,8 @@
       <div style="margin-top: 15%">
           <h1 class="text-center mt-20">Penyebab</h1>
             <hr>
+            <img src="{{ asset('style2/assets/img/front-e/penyebab.jpg') }}" alt="image" class="mx-auto d-block">
+            <hr>
             <p><strong>Berikut adalah faktor-faktor penyebab seseorang menjadi penyalahguna narkoba:</strong> <br/>
                 <br/>1) Penyebab dari diri sendiri yaitu Ketidakmampuan menyesuaikan diri dengan lingkungan Kepribadian yang lemah Kurangnya percaya diri Tidak mampu mengendalikan diri Dorongan ingin tahu,ingin mencoba,ingin meniru Dorongan ingin berpetualang Mengalami tekanan jiwa Tidak memikirkan akibatnya dikemudian hari Ketidaktahuan akan bahaya narkoba.<br/> 
                 <br/>2) Penyebab yang bersumber dari keluarga(orang tua) Salah satu atau kedua orang tua adalah pengguna narkoba Tidak mendapatkan perhatian,dan kasih sayang dari orang tua Keluarga tidak harmonis(tidak ada komunikasi yang terbuka dalam keluarga) Orang tua tidak memberikan pengawasan kepada anaknya Orang tua terlalu memanjakan anaknya Orang tua sibuk mencari uang/mengejar karir sehingga perhatian kepada anaknya menjadi terabaikan.<br/>

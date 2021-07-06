@@ -84,9 +84,9 @@
         <a href="">
           <img src="{{ asset('style2/assets/img/logo/bnnc.png') }}" width="30%" height="30%" style="border: 0px" class="mx-auto d-block" alt="">
         </a>
-        <div class="d-flex justify-content-center mt-2 inline-block">
-          <input type="text" name="search" class="" placeholder="Narkotika...">
-          <input type="submit" name="submit" id="search" class="btn btn-success">
+        <div class="text-center mt-2 inline-block col-5 ">
+          <input type="text" name="search" class="form-control" placeholder="Narkotika...">
+          <input type="submit" name="submit" id="search" class="btn btn-success mt-2">
         </div>
         </form>
     </div>

@@ -81,6 +81,8 @@
     <div style="margin-top: 15%">
       <h1 class="text-center mt-20">Dampak</h1>
       <hr>
+      <img src="{{ asset('style2/assets/img/front-e/dampak.jpg') }}" alt="image" class="mx-auto d-block">
+      <hr>
       <br/><strong>1) DAMPAK PENYALAHGUNAAN NARKOBA TERHADAP FISIK</strong>
       <br/>1.	Gangguan pada system syaraf (neurologis) seperti: kejang-kejang, halusinasi, gangguan kesadaran, kerusakan syaraf tepi
       <br/>2.	Gangguan pada jantung dan pembuluh  darah (kardiovaskuler) seperti: infeksi akut otot jantung, gangguan peredaran darah

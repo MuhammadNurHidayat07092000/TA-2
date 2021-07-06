@@ -64,10 +64,10 @@
           </li>
           <li><a href="{{ url('home2') }}">Beranda</a></li>
           {{-- <li><a href="#artikel">Artikel</a></li> --}}
-          <li class="drop-down active"><a href="">Narkotika</a>
+          <li class="drop-down"><a href="">Narkotika</a>
             <ul>
               <li><a href="{{ url('frontends/penyebab') }}">Penyebab</a></li>
-              <li class="active"><a href="{{ url('frontends/dampak') }}">Dampak</a></li>
+              <li><a href="{{ url('frontends/dampak') }}">Dampak</a></li>
               <li><a href="{{ url('frontends/uu') }}">Undang-Undang Narkotika</a></li>
               <li><a href="{{ url('frontends/jenisnark') }}">Jenis-Jenis Narkotika</a></li>
               <li><a href="{{ url('frontends/ttgnark') }}">Pencarian</a></li>
@@ -82,6 +82,8 @@
           @foreach ($articles as $item)
           <div class="text-center">
              <h3>{{ $item->judul }}</h3> 
+             <hr>
+             <img src="{{ asset('style2/assets/img/artikel/' . $item->gambar) }}" class="img-fluid rounded">
           </div>
           <hr>
           <p class="text-justify">{{ $item->isi }}</p>
