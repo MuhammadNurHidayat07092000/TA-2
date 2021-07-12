@@ -129,7 +129,7 @@
   @yield('clients') --}}
   @yield('services')
   @yield('contact')
-  {{-- @yield('footer') --}}
+  @yield('footer')
 
   {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
   <script>
