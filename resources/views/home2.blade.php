@@ -130,7 +130,7 @@
           <div class="section-title">
             <h2>Articles</h2>
             <h3>Check our <span>Articles</span></h3>
-            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+            {{-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p> --}}
           </div>
           <div class="row">
             @foreach ($articles as $item)

@@ -79,8 +79,8 @@
   </header>
 
   <div class="container">
-    <div style="margin-top: 15%" id="search">
-      <form action="">
+    <div style="margin-top: 15%">
+      <form action="ttgnark.php">
         <a href="">
           <img src="{{ asset('style2/assets/img/logo/bnnc.png') }}" width="30%" height="30%" style="border: 0px" class="mx-auto d-block" alt="">
         </a>

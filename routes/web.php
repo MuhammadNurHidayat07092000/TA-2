@@ -47,7 +47,7 @@ Route::get('types/restore/{id?}', 'TypeController@restore');
 Route::get('types/delete/{id?}', 'TypeController@delete');
 Route::resource('types', 'TypeController');
 
-//Authentifikasi
+// Authentifikasi
 // Route::get('auths', 'AuthController@formLogin')->name('login');
 // Route::post('auths/proses', 'AuthController@login')->name('login');
 

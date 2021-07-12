@@ -41,7 +41,7 @@
                 </div>       
                 <div class="card-body">
                     <div class="col-md-4 offset-md-4">
-                        <form action="{{ url('types/' . $type->id) }}" method="post">
+                        <form action="{{ url('types/' . $type->id) }}" method="post" enctype="multipart/form-data">
                             @method('PUT')
                             @csrf
                             <div class="form-group">
@@ -58,9 +58,10 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="gambar">Gambar</label><br>
-                                <img src="{{ $type->gambar }}" class="w-100">
-                                <input type="file" alt="submit" width="" height="" value="true" required>
+                                <input type="file" id="gambar" name="gambar">
+                            </div>
+                            <div class="form-group">
+                                <img src="{{ asset('style2/assets/img/narkoba/' . $type->gambar) }}" height="10%">
                             </div>
                             <div class="form-group">
                                 <label for="deskripsi">Deskripsi</label>

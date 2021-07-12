@@ -261,29 +261,30 @@
     <div class="sufee-login d-flex align-content-center flex-wrap mt-5">
         <div class="container">
             <div class="login-content">
-                <div class="login-logo">
+                {{-- <div class="login-logo">
                     <a href="index.html">
                         <img class="align-content" src="{{ asset('style/images/logo.png') }}" alt="">
                     </a>
-                </div>
+                </div> --}}
                 <div class="login-form">
                     <form action="{{ url('auths/proses') }}" method="POST">
                         @csrf
+                         <h4>LOGIN</h4>
                         <div class="form-group">
-                            <label id="username">Username</label>
-                            <input type="text" name="username" class="form-control" placeholder="username">
+                            {{-- <label id="username">Username</label> --}}
+                            <input type="text" name="username" class="form-control" placeholder="Username">
                         </div>
                         <div class="form-group">
-                            <label id="password">Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="password">
+                            {{-- <label id="password">Password</label> --}}
+                            <input type="password" name="password" class="form-control" placeholder="Password">
                         </div>
                         <div class="checkbox">
                             <label>
                             <input type="checkbox"> Remember Me
                         </label>
-                        <label class="pull-right">
+                        {{-- <label class="pull-right">
                             <a href="#">Forgotten Password?</a>
-                            </label>
+                        </label> --}}
                         </div>
                         <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
                     </form>

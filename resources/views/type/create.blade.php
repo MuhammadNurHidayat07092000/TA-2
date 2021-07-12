@@ -41,7 +41,7 @@
                 </div>       
                 <div class="card-body">
                     <div class="col-md-4 offset-md-4">
-                        <form action="{{ url('types') }}" method="post">
+                        <form action="{{ url('types') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="nama_narkoba">Nama Narkoba</label>
@@ -57,8 +57,8 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="gambar">Gambar</label>
-                                <input type="file" alt="submit" width="" height="" required>
+                                {{-- <label for="gambar">Gambar</label> --}}
+                                <input type="file" name="gambar" alt="submit" width="" height="" re>
                             </div>
                             <div class="form-group">
                                 <label for="deskripsi">Deskripsi</label>

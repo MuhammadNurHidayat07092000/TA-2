@@ -69,7 +69,7 @@
               <li><a href="{{ url('frontends/penyebab') }}">Penyebab</a></li>
               <li><a href="{{ url('frontends/dampak') }}">Dampak</a></li>
               <li><a href="{{ url('frontends/uu') }}">Undang-Undang Narkotika</a></li>
-              <li><a href="{{ url('frontends/jenisnark') }}">Jenis-Jenis Narkotika</a></li>
+              {{-- <li><a href="{{ url('frontends/jenisnark') }}">Jenis-Jenis Narkotika</a></li> --}}
               <li><a href="{{ url('frontends/pencarian') }}">Pencarian</a></li>
             </ul>
           </li>
@@ -87,38 +87,49 @@
         <button type="button" class="btn-get-started scrollto" data-toggle="modal" data-target="#scrollmodal">
           Watch Video <i class="icofont-play-alt-2"></i>
         </button>
-        
-        <div class="modal fade" id="scrollmodal" tabindex="-1" role="dialog" aria-labelledby="scrollmodalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="scrollmodalLabel">Daftar Video</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                    <a href="https://www.youtube.com/watch?v=WXn_-kpMA2M" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="false"> Video 1<i class="icofont-play-alt-2"></i></a><br>  
-                    <a href="https://www.youtube.com/watch?v=WXn_-kpMA2M" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="false"> Video 2<i class="icofont-play-alt-2"></i></a><br>  
-                    <a href="https://www.youtube.com/watch?v=WXn_-kpMA2M" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="false"> Video 3<i class="icofont-play-alt-2"></i></a>  
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                      <button type="button" class="btn btn-primary">Confirm</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-      </div>
     </div>
   </section>
 
+  <div class="d-flex align-items-center">
+    <div class="container aos-init aos-animate">
+      <div class="modal fade" id="scrollmodal" tabindex="-1" role="dialog" aria-labelledby="scrollmodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="scrollmodalLabel">Daftar Video</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li>
+                      <a href="https://www.youtube.com/watch?v=WXn_-kpMA2M" class="venobox btn-watch-video vbox-item" data-vbtype="video" data-autoplay="false"> Video 1</a><br>  
+                    </li>
+                    <li>
+                      <a href="https://www.youtube.com/watch?v=WXn_-kpMA2M" class="venobox btn-watch-video vbox-item" data-vbtype="video" data-autoplay="false"> Video 2</a><br>  
+                    </li>
+                    <li>
+                      <a href="https://www.youtube.com/watch?v=WXn_-kpMA2M" class="venobox btn-watch-video vbox-item" data-vbtype="video" data-autoplay="false"> Video 3</a><br>  
+                    </li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    {{-- <button type="button" class="btn btn-primary">Confirm</button> --}}
+                </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{-- 
   @yield('about')
   @yield('counts')
-  @yield('clients')
+  @yield('clients') --}}
   @yield('services')
   @yield('contact')
-  @yield('footer')
+  {{-- @yield('footer') --}}
 
   {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
   <script>

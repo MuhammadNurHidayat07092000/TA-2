@@ -43,6 +43,11 @@ class TypeController extends Controller
     public function store(Request $request)
     {
         Type::create($request->all());
+
+        $filename = $request->gambar->getClientOriginalName();
+        $gambar = $request->gambar->storeAs('img', $filename);
+
+        // $request->gambar = $gambar;
         return redirect('types')->with('status', 'Jenis Narkoba berhasil ditambahkan!');
     }
 
@@ -82,6 +87,14 @@ class TypeController extends Controller
         $type->gambar = $request->gambar;
         $type->deskripsi = $request->deskripsi;
         $type->epek_gejala = $request->epek_gejala;
+
+        if ($request->hasFile('gambar')) {
+            $image = $request->file('gambar');
+            $filename = $image->getClientOriginalName();
+            $image->move(public_path('style2/assets/img/narkoba'), $filename);
+            $type->image = $request->file('gambar')->getClientOriginalName();
+        }
+
         $type->save();
 
         return redirect('types')->with('status', 'Jenis Narkoba berhasil diubah!');
