@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Type;
+use Yajra\DataTables\DataTables;
+use Yajra\DataTables\Html\Builder;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
@@ -48,8 +52,37 @@ class FrontEndController extends Controller
         return view('front-end.jenisnark');
     }
 
-    public function pencarian()
+    public function pencarian(Builder $builder)
     {
-        return view('front-end.ttgnark');
+        if (request()->ajax()) {
+            $data = Type::with('category')->get();
+            return DataTables::of($data)
+                ->addIndexColumn()
+                ->addColumn('des', function ($data) {
+                    return Str::words($data->deskripsi, 5, '...');
+                })
+                ->addColumn('efek', function ($data) {
+                    return Str::words($data->epek_gejala, 3, '...');
+                })
+                ->addColumn('action', function ($data) {
+                    return '
+                        <a onclick="editForm(' . $data->id . ',\'detail\')" class="btn btn-info btn-sm"><i class="icofont-eye-alt"></i></a>
+                      ';
+                })
+                ->make(true);
+        }
+        $html = $builder->columns([
+            ['data' => 'DT_RowIndex', 'orderable', 'title' => 'No', 'orderable' => false, 'searchable' => false],
+            ['data' => 'nama_narkoba', 'title' => 'Nama Narkoba'],
+            ['data' => 'des', 'title' => 'Deskripsi'],
+            ['data' => 'efek', 'title' => 'Efek Gejala'],
+            ['data' => 'category.jenis_kategori', 'title' => 'Jenis Kategori'],
+            ['data' => 'action', 'title' => 'Aksi', 'orderable' => false, 'searchable' => false]
+        ])->parameters([
+            'language' => [
+                'url' => asset('tables_indo.json')
+            ]]);
+        // return view('category.index', compact('html'));
+        return view('front-end.ttgnark', compact('html'));
     }
 }

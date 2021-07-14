@@ -20,6 +20,8 @@
   <link href="{{ asset('style2/assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
   <link href="{{ asset('style2/assets/vendor/aos/aos.css') }}" rel="stylesheet">
   <link href="{{ asset('style2/assets/css/style.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+
 </head>
 
 <body>
@@ -34,6 +36,9 @@
    <script src="{{ asset('style2/assets/vendor/venobox/venobox.min.js') }}"></script>
    <script src="{{ asset('style2/assets/vendor/aos/aos.js') }}"></script>
    <script src="{{ asset('style2/assets/js/main.js') }}"></script>
+   <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    {!! $html->scripts() !!}
 
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
     <div class="container d-flex">
@@ -80,15 +85,13 @@
 
   <div class="container">
     <div style="margin-top: 15%">
-      <form action="ttgnark.php">
         <a href="">
-          <img src="{{ asset('style2/assets/img/logo/bnnc.png') }}" width="30%" height="30%" style="border: 0px" class="mx-auto d-block" alt="">
-        </a>
-        <div class="text-center mt-2 inline-block col-5 ">
-          <input type="text" name="search" class="form-control" placeholder="Narkotika...">
-          <input type="submit" name="submit" id="search" class="btn btn-success mt-2">
+            <img src="{{ asset('style2/assets/img/logo/bnnc.png') }}" width="30%" height="30%" style="border: 0px" class="mx-auto d-block" alt="">
+          </a>
+
+        <div class="table-responsive">
+            {!! $html->table() !!}
         </div>
-        </form>
     </div>
   </div>
 </body>
