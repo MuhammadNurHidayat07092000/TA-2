@@ -66,7 +66,7 @@ class FrontEndController extends Controller
                 })
                 ->addColumn('action', function ($data) {
                     return '
-                        <a onclick="editForm(' . $data->id . ',\'detail\')" class="btn btn-info btn-sm"><i class="icofont-eye-alt"></i></a>
+                        <a href="' . route('cari-detail', $data->id) . '" class="btn btn-info btn-sm"><i class="icofont-eye-alt"></i></a>
                       ';
                 })
                 ->make(true);
@@ -81,8 +81,14 @@ class FrontEndController extends Controller
         ])->parameters([
             'language' => [
                 'url' => asset('tables_indo.json')
-            ]]);
+            ]
+        ]);
         // return view('category.index', compact('html'));
         return view('front-end.ttgnark', compact('html'));
+    }
+    public function pencarianDetail($id)
+    {
+        $data = Type::with('category')->where('id', $id)->first();
+        return view('front-end.ttgnark-detail', compact('data'));
     }
 }

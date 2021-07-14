@@ -67,4 +67,5 @@ Route::get('frontends/struktur', 'FrontEndController@struktur');
 Route::get('frontends/uu', 'FrontEndController@uu');
 Route::get('frontends/visimisi', 'FrontEndController@visimisi');
 Route::get('frontends/jenisnark', 'FrontEndController@jenisnark');
-Route::get('frontends/pencarian', 'FrontEndController@pencarian');
+Route::get('frontends/pencarian', 'FrontEndController@pencarian')->name('cari');
+Route::get('frontends/pencarian/{id}/detail', 'FrontEndController@pencarianDetail')->name('cari-detail');
