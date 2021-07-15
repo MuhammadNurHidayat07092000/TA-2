@@ -69,7 +69,7 @@
               <li><a href="{{ url('frontends/penyebab') }}">Penyebab</a></li>
               <li><a href="{{ url('frontends/dampak') }}">Dampak</a></li>
               <li><a href="{{ url('frontends/uu') }}">Undang-Undang Narkotika</a></li>
-              <li><a href="{{ url('frontends/jenisnark') }}">Jenis-Jenis Narkotika</a></li>
+              {{-- <li><a href="{{ url('frontends/jenisnark') }}">Jenis-Jenis Narkotika</a></li> --}}
               <li><a href="{{ url('frontends/pencarian') }}">Pencarian</a></li>
             </ul>
           </li>
@@ -77,4 +77,13 @@
       </nav>
     </div>
   </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 style="margin-top: 15%" class="text-center">Struktur Organisasi</h1>
+        <hr>
+        <img src="{{ asset('style2/assets/img/front-e/so.png') }}" style="width: 50%" alt="image" class="mx-auto d-block">
+      </div>
+    </div>
+  </div>
 </body>

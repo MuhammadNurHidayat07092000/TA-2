@@ -69,7 +69,7 @@
               <li class="active"><a href="{{ url('frontends/penyebab') }}">Penyebab</a></li>
               <li><a href="{{ url('frontends/dampak') }}">Dampak</a></li>
               <li><a href="{{ url('frontends/uu') }}">Undang-Undang Narkotika</a></li>
-              <li><a href="{{ url('frontends/jenisnark') }}">Jenis-Jenis Narkotika</a></li>
+              {{-- <li><a href="{{ url('frontends/jenisnark') }}">Jenis-Jenis Narkotika</a></li> --}}
               <li><a href="{{ url('frontends/pencarian') }}">Pencarian</a></li>
             </ul>
           </li>

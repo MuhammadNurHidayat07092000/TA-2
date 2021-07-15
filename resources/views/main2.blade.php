@@ -127,8 +127,8 @@
   @yield('about')
   @yield('counts')
   @yield('clients') --}}
-  @yield('services')
-  @yield('contact')
+  @yield('articles')
+  @yield('maps')
   @yield('footer')
 
   {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>

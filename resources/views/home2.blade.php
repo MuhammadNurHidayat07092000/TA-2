@@ -3,127 +3,7 @@
 @section('title','User Interface')
 
 <main id="main">
-  {{-- @section('about')
-      <section id="about" class="about section-bg">
-        <div class="container" data-aos="fade-up">
-
-          <div class="section-title">
-            <h2>About</h2>
-            <h3>Find Out More <span>About Us</span></h3>
-            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="100">
-              <img src="{{ asset('style2/assets/img/about.jpg') }}" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-              <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-              <p class="font-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-              <ul>
-                <li>
-                  <i class="bx bx-store-alt"></i>
-                  <div>
-                    <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                    <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
-                  </div>
-                </li>
-                <li>
-                  <i class="bx bx-images"></i>
-                  <div>
-                    <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                    <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
-                  </div>
-                </li>
-              </ul>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-  @endsection
-    
-  @section('counts')
-      <section id="counts" class="counts">
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-
-            <div class="col-lg-3 col-md-6">
-              <div class="count-box">
-                <i class="icofont-simple-smile"></i>
-                <span data-toggle="counter-up">232</span>
-                <p>Happy Clients</p>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-              <div class="count-box">
-                <i class="icofont-document-folder"></i>
-                <span data-toggle="counter-up">521</span>
-                <p>Projects</p>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-              <div class="count-box">
-                <i class="icofont-live-support"></i>
-                <span data-toggle="counter-up">1,463</span>
-                <p>Hours Of Support</p>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-              <div class="count-box">
-                <i class="icofont-users-alt-5"></i>
-                <span data-toggle="counter-up">15</span>
-                <p>Hard Workers</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  @endsection
-   
-  @section('clients')
-      <section id="clients" class="clients section-bg">
-        <div class="container" data-aos="zoom-in">
-          <div class="row">
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="{{ asset('style2/assets/img/clients/client-1.png') }}" class="img-fluid" alt="">
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="{{ asset('style2/assets/img/clients/client-2.png') }}" class="img-fluid" alt="">
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="{{ asset('style2/assets/img/clients/client-3.png') }}" class="img-fluid" alt="">
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="{{ asset('style2/assets/img/clients/client-4.png') }}" class="img-fluid" alt="">
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="{{ asset('style2/assets/img/clients/client-5.png') }}" class="img-fluid" alt="">
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="{{ asset('style2/assets/img/clients/client-6.png') }}" class="img-fluid" alt="">
-            </div>
-          </div>
-        </div>
-      </section>
-  @endsection --}}
-   
-  @section('services')
+  @section('articles')
       <section id="artikel" class="services">
         <div class="container" data-aos="fade-up">
 
@@ -146,7 +26,7 @@
       </section>
   @endsection
   
-  @section('contact')
+  @section('maps')
       <section id="contact" class="contact">
         <div class="container" data-aos="fade-up">
 
@@ -158,7 +38,7 @@
 
           <div class="row" data-aos="fade-up" data-aos-delay="100">
             <div class="col-lg-12 ">
-              <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.7576012750046!2d116.085640714518!3d-8.619254789965982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdbfa83d611f21%3A0x44ee41db6062236d!2sBADAN%20NARKOTIKA%20NASIONAL%20PROVINSI%20NUSA%20TENGGARA%20BARAT!5e0!3m2!1sen!2sid!4v1626104780230!5m2!1sen!2sid" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+              <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.7576012750046!2d116.085640714518!3d-8.619254789965982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdbfa83d611f21%3A0x44ee41db6062236d!2sBADAN%20NARKOTIKA%20NASIONAL%20PROVINSI%20NUSA%20TENGGARA%20BARAT!5e0!3m2!1sen!2sid!4v1626104780230!5m2!1sen!2sid" frameborder="0" style="border:0; width: 100%; height: 500px;" allowfullscreen></iframe>
             </div>
           </div>
       </section>
