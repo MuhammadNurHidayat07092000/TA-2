@@ -82,7 +82,8 @@
       <div class="col-lg-12">
         <h1 style="margin-top: 15%" class="text-center">Struktur Organisasi</h1>
         <hr>
-        <img src="{{ asset('style2/assets/img/front-e/so.png') }}" style="width: 50%" alt="image" class="mx-auto d-block">
+        <img src="{{ asset('style2/assets/img/front-e/so2.jpg') }}" style="width: 50%" alt="image" class="mx-auto d-block">
+        <img src="{{ asset('style2/assets/img/front-e/so.png') }}" style="width: 50%" alt="image" class="mx-auto d-block mt-3">
       </div>
     </div>
   </div>
