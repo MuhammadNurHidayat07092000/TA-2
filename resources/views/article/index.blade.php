@@ -42,7 +42,7 @@
                             <i class="fa fa-plus"></i>Add
                         </a>
                     </div>
-                </div>       
+                </div>
                 <div class="card-body table-responsive">
                     <table class="table table-bordered">
                         <thead class="text-center">
@@ -52,15 +52,15 @@
                                 <th>Isi</th>
                                 <th>Gambar</th>
                                 <th>Aksi</th>
-                            </tr>  
+                            </tr>
                         </thead>
                         <tbody>
                             @foreach ($articles as $item)
                                 <tr>
-                                    <td>{{ $loop->iteration }}</td>     
+                                    <td>{{ $loop->iteration }}</td>
                                     <td>{{ $item->judul }}</td>
                                     <div class="text-center">
-                                        <td>{{ $item->isi }}</td>
+                                        <td>{{ \Illuminate\Support\Str::words($item->isi, 5, '...') }}</td>
                                     </div>
                                     <td>
                                         <img src="{{ asset('style2/assets/img/artikel/' . $item->gambar) }}" width="100px" alt="image">
@@ -82,7 +82,7 @@
                         </tbody>
                     </table>
                 </div>
-            </div>     
+            </div>
         </div>
     </div>
 @endsection

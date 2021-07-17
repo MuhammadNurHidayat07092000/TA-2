@@ -2,6 +2,17 @@
 
 @section('title', 'Jenis Narkoba')
 
+@section('js')
+    <script src="https://cdn.ckeditor.com/4.16.1/basic/ckeditor.js"></script>
+
+    <script>
+        jQuery(function ($) {
+            CKEDITOR.replace('deskripsi');
+            CKEDITOR.replace('epek_gejala');
+        });
+    </script>
+@endsection
+
 @section('breadcrumbs')
     <div class="breadcrumbs">
         <div class="col-sm-4">
@@ -9,7 +20,7 @@
                 <div class="page-title">
                     <h1>Jenis Narkoba</h1>
                 </div>
-               
+
             </div>
         </div>
         <div class="col-sm-8">
@@ -38,9 +49,9 @@
                             <i class="fa fa-undo"></i>Back
                         </a>
                     </div>
-                </div>       
+                </div>
                 <div class="card-body">
-                    <div class="col-md-4 offset-md-4">
+                    <div class="col-md-8 col-sm-12">
                         <form action="{{ url('types') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
@@ -52,7 +63,8 @@
                                 <select name="id_kategori" id="id_kategori" class="form-control">
                                     <option value="">-- Pilih --</option>
                                     @foreach ($categories as $item)
-                                      <option value="{{ $item->id }}">{{ $item->jenis_kategori }} golongan {{ $item->golongan }}</option>      
+                                        <option value="{{ $item->id }}">{{ $item->jenis_kategori }}
+                                            golongan {{ $item->golongan }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -62,17 +74,19 @@
                             </div>
                             <div class="form-group">
                                 <label for="deskripsi">Deskripsi</label>
-                                <textarea name="deskripsi" id="deskripsi" cols="50" rows="10"></textarea>
+                                <textarea class="form-control summernote" name="deskripsi" id="deskripsi" cols="50"
+                                          rows="10"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="epek_gejala">Efek dan Gejala</label>
-                                <textarea name="epek_gejala" id="epek_gejala" cols="50" rows="10"></textarea>
+                                <textarea class="form-control " name="epek_gejala" id="epek_gejala" cols="50"
+                                          rows="10"></textarea>
                             </div>
                             <button type="submit" class="btn btn-success">Save</button>
                         </form>
                     </div>
                 </div>
-            </div>     
+            </div>
         </div>
     </div>
 @endsection

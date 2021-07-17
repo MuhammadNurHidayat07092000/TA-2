@@ -18,8 +18,7 @@ class TypeController extends Controller
      */
     public function index()
     {
-        $types = Type::paginate(10);
-        // dd($types);
+        $types = Type::orderBy('created_at', 'desc')->paginate(10);
         return view('type/index', compact('types'));
     }
 
